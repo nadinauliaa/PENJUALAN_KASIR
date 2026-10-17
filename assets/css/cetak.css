@@ -1,0 +1,257 @@
+/* =========================================================
+   CETAK STRUK KASIRPRO
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F7F9F5;
+    color: #26332A;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.print-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   STRUK
+========================= */
+
+.struk {
+    width: 380px;
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E2;
+    box-shadow: 0 8px 30px rgba(38, 51, 42, 0.08);
+}
+
+.struk-header {
+    text-align: center;
+}
+
+.struk-header h1 {
+    margin: 0;
+    color: #7FA88C;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.struk-header p {
+    margin: 6px 0 0;
+    color: #78837B;
+    font-size: 11px;
+}
+
+/* =========================
+   GARIS
+========================= */
+
+.struk-line {
+    margin: 18px 0;
+    border-top: 1px dashed #98A49D;
+}
+
+/* =========================
+   INFORMASI
+========================= */
+
+.struk-info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.struk-info > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.struk-info span {
+    color: #78837B;
+    font-size: 11px;
+}
+
+.struk-info strong {
+    color: #26332A;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* =========================
+   PRODUK
+========================= */
+
+.produk-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.produk-nama {
+    margin-bottom: 5px;
+    color: #26332A;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.produk-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.produk-detail span {
+    color: #78837B;
+    font-size: 11px;
+}
+
+.produk-detail strong {
+    color: #26332A;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================
+   TOTAL
+========================= */
+
+.total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-row span {
+    color: #3F4A43;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.total-row strong {
+    color: #7FA88C;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.struk-footer {
+    text-align: center;
+}
+
+.struk-footer p {
+    margin: 0 0 5px;
+    color: #3F4A43;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.struk-footer span {
+    color: #98A49D;
+    font-size: 9px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.print-actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-print,
+.btn-back {
+    min-height: 40px;
+    padding: 10px 17px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-print {
+    border: 1px solid #7FA88C;
+    background: #7FA88C;
+    color: #FFFFFF;
+}
+
+.btn-print:hover {
+    background: #66846F;
+}
+
+.btn-back {
+    border: 1px solid #D5DED7;
+    background: #FFFFFF;
+    color: #52665B;
+}
+
+.btn-back:hover {
+    background: #F7F9F5;
+}
+
+/* =========================
+   MODE CETAK
+========================= */
+
+@media print {
+
+    @page {
+        size: 80mm auto;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 80mm;
+        margin: 0;
+        padding: 0;
+        background: #FFFFFF;
+    }
+
+    .print-wrapper {
+        width: 80mm;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .struk {
+        width: 80mm;
+        padding: 8mm 5mm;
+        border: none;
+        box-shadow: none;
+    }
+
+    .print-actions {
+        display: none;
+    }
+
+    .struk-header h1 {
+        font-size: 20px;
+    }
+
+    .struk-header p {
+        font-size: 9px;
+    }
+}

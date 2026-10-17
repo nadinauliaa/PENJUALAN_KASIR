@@ -1,0 +1,1654 @@
+/* =========================================================
+   BOTTLE.CO - KASIR / POS
+   FINAL VERSION
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.kasir-dashboard {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #F7F9F5 !important;
+    color: #26332A !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.kasir-sidebar {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 235px !important;
+
+    padding: 24px 14px 16px !important;
+
+    background: #FFFFFF !important;
+
+    border-right: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    z-index: 1000 !important;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.sidebar-brand {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    padding: 0 9px 28px !important;
+}
+
+.sidebar-logo {
+    width: 40px !important;
+    height: 40px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #7FA88C !important;
+
+    border-radius: 10px !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 17px !important;
+    font-weight: 800 !important;
+}
+
+.sidebar-brand strong {
+    display: block !important;
+
+    color: #26332A !important;
+
+    font-size: 17px !important;
+    font-weight: 750 !important;
+}
+
+.sidebar-brand span {
+    display: block !important;
+
+    margin-top: 4px !important;
+
+    color: #98A49D !important;
+
+    font-size: 9px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+}
+
+
+/* =========================================================
+   MENU LABEL
+========================================================= */
+
+.sidebar-label {
+    padding: 0 11px 9px !important;
+
+    color: #98A49D !important;
+
+    font-size: 9px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .8px !important;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar-menu {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 3px !important;
+}
+
+.sidebar-link {
+    width: 100% !important;
+    min-height: 43px !important;
+
+    padding: 0 12px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    border-radius: 8px !important;
+
+    background: transparent !important;
+
+    color: #78837B !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+
+    transition:
+        background .18s ease,
+        color .18s ease !important;
+}
+
+.sidebar-link:hover {
+    background: #EAF2EC !important;
+
+    color: #7FA88C !important;
+}
+
+.sidebar-link.active {
+    background: #EAF2EC !important;
+
+    color: #7FA88C !important;
+
+    font-weight: 700 !important;
+}
+
+.sidebar-icon {
+    width: 20px !important;
+
+    flex-shrink: 0 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   TRANSAKSI
+   TIDAK SELALU BIRU
+========================================================= */
+
+.sidebar-link.transaction-link {
+    margin: 6px 0 !important;
+
+    background: transparent !important;
+
+    color: #78837B !important;
+}
+
+.sidebar-link.transaction-link:hover {
+    background: #EAF2EC !important;
+
+    color: #7FA88C !important;
+}
+
+.sidebar-link.transaction-link.active {
+    background: #7FA88C !important;
+
+    color: #FFFFFF !important;
+
+    font-weight: 700 !important;
+}
+
+.sidebar-link.transaction-link.active:hover {
+    background: #7FA88C !important;
+
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+    position: absolute !important;
+
+    left: 14px !important;
+    right: 14px !important;
+    bottom: 16px !important;
+
+    margin: 0 !important;
+
+    padding-top: 12px !important;
+
+    border-top: 1px solid #E1E8E2 !important;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.sidebar-logout {
+    width: 100% !important;
+    height: 39px !important;
+
+    padding: 0 10px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 9px !important;
+
+    border-radius: 7px !important;
+
+    background: transparent !important;
+
+    color: #d92d20 !important;
+
+    font-size: 11px !important;
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+
+    transition: .18s ease !important;
+}
+
+.sidebar-logout:hover {
+    background: #fff5f5 !important;
+
+    color: #c92a1e !important;
+}
+
+
+/* =========================================================
+   HIDE OLD SIDEBAR USER
+========================================================= */
+
+.sidebar-user,
+.sidebar-user-avatar,
+.sidebar-user-info {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.kasir-main {
+    min-height: 100vh !important;
+
+    margin-left: 235px !important;
+
+    padding: 0 !important;
+
+    background: #F7F9F5 !important;
+
+    position: relative !important;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.kasir-topbar {
+    width: 100% !important;
+    height: 66px !important;
+
+    margin: 0 !important;
+    padding: 0 30px !important;
+
+    background: #FFFFFF !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    position: relative !important;
+    top: 0 !important;
+
+    z-index: 10 !important;
+}
+
+
+/* LEFT HEADER */
+
+.topbar-heading {
+    display: flex !important;
+    flex-direction: column !important;
+
+    justify-content: center !important;
+}
+
+.topbar-label {
+    color: #7FA88C !important;
+
+    font-size: 9px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: 1px !important;
+}
+
+.kasir-topbar h1 {
+    margin: 3px 0 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 19px !important;
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* RIGHT HEADER */
+
+.topbar-right {
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    gap: 20px !important;
+}
+
+
+/* DATE + TIME */
+
+.topbar-date {
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: flex-end !important;
+    justify-content: center !important;
+
+    gap: 3px !important;
+
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+}
+
+.topbar-date strong {
+    padding: 0 !important;
+
+    border: none !important;
+
+    color: #3F4A43 !important;
+
+    font-size: 10px !important;
+    font-weight: 700 !important;
+}
+
+
+/* PROFILE */
+
+.topbar-profile {
+    min-width: 170px !important;
+
+    padding-left: 17px !important;
+
+    border-left: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 10px !important;
+}
+
+.topbar-avatar {
+    width: 38px !important;
+    height: 38px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #EAF2EC !important;
+
+    border-radius: 50% !important;
+
+    color: #7FA88C !important;
+
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+.topbar-profile-info {
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 3px !important;
+}
+
+.topbar-profile-info strong {
+    overflow: hidden !important;
+
+    color: #26332A !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+
+    text-overflow: ellipsis !important;
+}
+
+.topbar-profile-info span {
+    color: #98A49D !important;
+
+    font-size: 9px !important;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.kasir-content {
+    width: min(1180px, calc(100% - 56px)) !important;
+
+    margin: 0 auto !important;
+
+    padding: 27px 0 42px !important;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.kasir-welcome {
+    min-height: 128px !important;
+
+    margin-bottom: 17px !important;
+
+    padding: 24px 26px !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E1E8E2 !important;
+
+    border-radius: 11px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 25px !important;
+
+    box-shadow:
+        0 2px 5px rgba(38, 51, 42, .025) !important;
+}
+
+.welcome-label {
+    color: #7FA88C !important;
+
+    font-size: 9px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: 1.1px !important;
+}
+
+.kasir-welcome h2 {
+    margin: 7px 0 4px !important;
+
+    color: #26332A !important;
+
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+
+    font-weight: 750 !important;
+}
+
+.kasir-welcome p {
+    margin: 0 !important;
+
+    color: #78837B !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   MAIN TRANSACTION BUTTON
+========================================================= */
+
+.main-transaction-button {
+    min-width: 245px !important;
+
+    min-height: 60px !important;
+
+    padding: 10px 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    background: #7FA88C !important;
+
+    border-radius: 9px !important;
+
+    color: #FFFFFF !important;
+
+    text-decoration: none !important;
+
+    transition:
+        background .18s ease,
+        transform .18s ease !important;
+}
+
+.main-transaction-button:hover {
+    background: #66846F !important;
+
+    color: #FFFFFF !important;
+
+    transform: translateY(-1px) !important;
+}
+
+.button-icon {
+    width: 38px !important;
+    height: 38px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(255, 255, 255, .14) !important;
+
+    border-radius: 8px !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 20px !important;
+}
+
+.main-transaction-button span:not(.button-icon) {
+    flex: 1 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+}
+
+.main-transaction-button small {
+    margin-bottom: 3px !important;
+
+    color: rgba(255, 255, 255, .68) !important;
+
+    font-size: 8px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: .8px !important;
+}
+
+.main-transaction-button > strong {
+    color: #FFFFFF !important;
+
+    font-size: 16px !important;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.kasir-stats {
+    display: grid !important;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+    gap: 13px !important;
+
+    margin-bottom: 28px !important;
+}
+
+.stat-card {
+    min-height: 98px !important;
+
+    padding: 17px !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E1E8E2 !important;
+
+    border-radius: 10px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    box-shadow:
+        0 1px 3px rgba(38, 51, 42, .02) !important;
+}
+
+.stat-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 9px !important;
+
+    font-size: 14px !important;
+    font-weight: 800 !important;
+}
+
+.stat-icon.blue {
+    background: #EAF2EC !important;
+    color: #7FA88C !important;
+}
+
+.stat-icon.green {
+    background: #edf8f2 !important;
+    color: #18864b !important;
+}
+
+.stat-icon.orange {
+    background: #fff4e7 !important;
+    color: #bd7115 !important;
+}
+
+.stat-icon.purple {
+    background: #f2edfa !important;
+    color: #7550a3 !important;
+}
+
+.stat-content {
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.stat-content span {
+    color: #8B958A !important;
+
+    font-size: 8px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: .6px !important;
+}
+
+.stat-content strong {
+    margin-top: 5px !important;
+
+    color: #26332A !important;
+
+    font-size: 19px !important;
+    font-weight: 750 !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   LOWER CONTENT
+========================================================= */
+
+.kasir-body-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1.75fr)
+        minmax(290px, .8fr) !important;
+
+    gap: 24px !important;
+
+    align-items: start !important;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+    min-height: 42px !important;
+
+    margin-bottom: 12px !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+
+    gap: 15px !important;
+}
+
+.section-header span {
+    color: #7FA88C !important;
+
+    font-size: 8px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: 1px !important;
+}
+
+.section-header h2 {
+    margin: 4px 0 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 18px !important;
+
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+}
+
+.section-header a {
+    color: #7FA88C !important;
+
+    font-size: 10px !important;
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+
+    white-space: nowrap !important;
+}
+
+.section-header a:hover {
+    color: #66846F !important;
+}
+
+
+/* =========================================================
+   TRANSACTION TABLE
+========================================================= */
+
+.transaction-table {
+    overflow: hidden !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E1E8E2 !important;
+
+    border-radius: 10px !important;
+}
+
+.transaction-table-head,
+.transaction-row {
+    display: grid !important;
+
+    grid-template-columns:
+        1.1fr
+        1.25fr
+        1fr
+        1fr !important;
+
+    align-items: center !important;
+}
+
+.transaction-table-head {
+    min-height: 40px !important;
+
+    padding: 0 17px !important;
+
+    background: #F1F5F2 !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+
+    color: #8B958A !important;
+
+    font-size: 8px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .7px !important;
+}
+
+.transaction-row {
+    min-height: 65px !important;
+
+    padding: 0 17px !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+}
+
+.transaction-row:last-child {
+    border-bottom: none !important;
+}
+
+.transaction-number {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 9px !important;
+}
+
+.transaction-mini-icon {
+    width: 30px !important;
+    height: 30px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 7px !important;
+
+    background: #EAF2EC !important;
+
+    color: #7FA88C !important;
+
+    font-size: 8px !important;
+    font-weight: 800 !important;
+}
+
+.transaction-number strong {
+    color: #3F4A43 !important;
+
+    font-size: 11px !important;
+}
+
+.customer-name {
+    color: #3F4A43 !important;
+
+    font-size: 11px !important;
+    font-weight: 600 !important;
+}
+
+.transaction-time {
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+}
+
+.transaction-price {
+    color: #7FA88C !important;
+
+    font-size: 11px !important;
+    font-weight: 750 !important;
+
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   QUICK MENU
+========================================================= */
+
+.quick-menu {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 9px !important;
+}
+
+.quick-card {
+    width: 100% !important;
+
+    min-height: 70px !important;
+
+    padding: 11px 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E1E8E2 !important;
+
+    border-radius: 10px !important;
+
+    color: #26332A !important;
+
+    text-decoration: none !important;
+
+    transition:
+        border-color .18s ease,
+        box-shadow .18s ease,
+        transform .18s ease !important;
+}
+
+.quick-card:hover {
+    background: #FFFFFF !important;
+
+    border-color: #BFD0C3 !important;
+
+    color: #26332A !important;
+
+    transform: translateY(-1px) !important;
+
+    box-shadow:
+        0 4px 12px rgba(38, 51, 42, .06) !important;
+}
+
+.quick-icon {
+    width: 39px !important;
+    height: 39px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #EAF2EC !important;
+
+    border-radius: 8px !important;
+
+    font-size: 15px !important;
+}
+
+.quick-card > div:nth-child(2) {
+    min-width: 0 !important;
+
+    flex: 1 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 3px !important;
+}
+
+.quick-card strong {
+    color: #3F4A43 !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+}
+
+.quick-card span {
+    color: #98A49D !important;
+
+    font-size: 9px !important;
+}
+
+.quick-card b {
+    color: #7FA88C !important;
+
+    font-size: 15px !important;
+
+    font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.kasir-footer {
+    margin-left: 235px !important;
+
+    min-height: 48px !important;
+
+    background: #FFFFFF !important;
+
+    border-top: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   EMPTY TRANSACTION
+========================================================= */
+
+.transaction-empty {
+    min-height: 210px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center !important;
+}
+
+.transaction-empty div {
+    font-size: 28px !important;
+}
+
+.transaction-empty strong {
+    margin-top: 8px !important;
+
+    color: #78837B !important;
+
+    font-size: 13px !important;
+}
+
+.transaction-empty span {
+    margin-top: 4px !important;
+
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .kasir-content {
+        width: calc(100% - 40px) !important;
+    }
+
+    .kasir-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .kasir-body-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .kasir-sidebar {
+        width: 72px !important;
+
+        padding: 20px 9px 12px !important;
+    }
+
+    .sidebar-brand {
+        justify-content: center !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 25px !important;
+    }
+
+    .sidebar-brand > div:last-child,
+    .sidebar-label,
+    .sidebar-link span:last-child {
+        display: none !important;
+    }
+
+    .sidebar-link {
+        justify-content: center !important;
+
+        padding: 0 !important;
+    }
+
+    .sidebar-icon {
+        width: auto !important;
+    }
+
+    .sidebar-bottom {
+        left: 9px !important;
+        right: 9px !important;
+    }
+
+    .sidebar-logout {
+        justify-content: center !important;
+
+        padding: 0 !important;
+    }
+
+    .sidebar-logout span {
+        display: inline !important;
+    }
+
+    .kasir-main {
+        margin-left: 72px !important;
+    }
+
+    .kasir-footer {
+        margin-left: 72px !important;
+    }
+
+    .kasir-topbar {
+        height: 62px !important;
+
+        padding: 0 15px !important;
+    }
+
+    .kasir-topbar h1 {
+        font-size: 17px !important;
+    }
+
+    .topbar-right {
+        gap: 8px !important;
+    }
+
+    .topbar-date {
+        display: none !important;
+    }
+
+    .topbar-profile {
+        min-width: auto !important;
+
+        padding-left: 10px !important;
+    }
+
+    .topbar-profile-info {
+        display: none !important;
+    }
+
+    .topbar-avatar {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .kasir-content {
+        width: calc(100% - 30px) !important;
+
+        padding-top: 20px !important;
+    }
+
+    .kasir-welcome {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+
+        padding: 20px !important;
+    }
+
+    .kasir-welcome h2 {
+        font-size: 21px !important;
+    }
+
+    .main-transaction-button {
+        width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+    .kasir-stats {
+        grid-template-columns: 1fr !important;
+    }
+
+    .transaction-table-head {
+        display: none !important;
+    }
+
+    .transaction-row {
+        grid-template-columns: 1fr auto !important;
+
+        min-height: 62px !important;
+    }
+
+    .customer-name,
+    .transaction-time {
+        display: none !important;
+    }
+
+    .transaction-price {
+        text-align: right !important;
+    }
+}
+/* =========================================================
+   FINAL FIX KASIR
+   FONT NORMAL + MENU KASIR
+========================================================= */
+
+
+/* =========================================================
+   FONT UTAMA
+========================================================= */
+
+body.kasir-dashboard {
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   SIDEBAR - FONT NORMAL
+========================================================= */
+
+.sidebar-brand strong {
+    font-size: 17px !important;
+}
+
+.sidebar-brand span {
+    font-size: 9px !important;
+}
+
+.sidebar-label {
+    font-size: 10px !important;
+}
+
+.sidebar-link {
+    min-height: 44px !important;
+
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.sidebar-link.active {
+    font-weight: 700 !important;
+}
+
+.sidebar-icon {
+    font-size: 15px !important;
+}
+
+.sidebar-logout {
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.topbar-label {
+    font-size: 10px !important;
+}
+
+.kasir-topbar h1 {
+    font-size: 20px !important;
+}
+
+.topbar-date {
+    font-size: 11px !important;
+}
+
+.topbar-date strong {
+    font-size: 11px !important;
+}
+
+.topbar-profile-info strong {
+    font-size: 13px !important;
+}
+
+.topbar-profile-info span {
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome-label {
+    font-size: 10px !important;
+}
+
+.kasir-welcome h2 {
+    font-size: 25px !important;
+}
+
+.kasir-welcome p {
+    font-size: 13px !important;
+}
+
+.main-transaction-button span:not(.button-icon) {
+    font-size: 13px !important;
+}
+
+.main-transaction-button small {
+    font-size: 9px !important;
+}
+
+
+/* =========================================================
+   STATISTIK
+========================================================= */
+
+.stat-content span {
+    font-size: 10px !important;
+}
+
+.stat-content strong {
+    font-size: 20px !important;
+}
+
+.stat-icon {
+    font-size: 15px !important;
+}
+
+
+/* =========================================================
+   JUDUL SECTION
+========================================================= */
+
+.section-header span {
+    font-size: 10px !important;
+}
+
+.section-header h2 {
+    font-size: 19px !important;
+}
+
+.section-header a {
+    font-size: 11px !important;
+}
+
+
+/* =========================================================
+   TABEL TRANSAKSI
+========================================================= */
+
+.transaction-table-head {
+    min-height: 43px !important;
+
+    font-size: 10px !important;
+}
+
+.transaction-row {
+    min-height: 68px !important;
+}
+
+.transaction-number strong {
+    font-size: 13px !important;
+}
+
+.customer-name {
+    font-size: 13px !important;
+}
+
+.transaction-time {
+    font-size: 11px !important;
+}
+
+.transaction-price {
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   MENU KASIR
+========================================================= */
+
+.quick-section {
+    width: 100% !important;
+}
+
+.quick-menu {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 10px !important;
+}
+
+
+/* KARTU MENU */
+
+body.kasir-dashboard .quick-section .quick-menu .quick-card {
+    width: 100% !important;
+
+    min-height: 74px !important;
+
+    margin: 0 !important;
+    padding: 12px 15px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E1E8E2 !important;
+
+    border-radius: 10px !important;
+
+    color: #26332A !important;
+
+    text-decoration: none !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+}
+
+body.kasir-dashboard .quick-section .quick-menu .quick-card:hover {
+    background: #FFFFFF !important;
+
+    border-color: #BFD0C3 !important;
+
+    color: #26332A !important;
+
+    transform: translateY(-1px) !important;
+
+    box-shadow: 0 4px 12px rgba(38, 51, 42, .06) !important;
+}
+
+
+/* ICON MENU */
+
+body.kasir-dashboard .quick-section .quick-card .quick-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #EAF2EC !important;
+
+    border-radius: 9px !important;
+
+    font-size: 17px !important;
+}
+
+
+/* TEKS MENU */
+
+body.kasir-dashboard .quick-section .quick-menu .quick-card > div:nth-child(2) {
+    flex: 1 !important;
+
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 4px !important;
+}
+
+body.kasir-dashboard .quick-section .quick-menu .quick-card strong {
+    display: block !important;
+
+    margin: 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+body.kasir-dashboard .quick-section .quick-menu .quick-card span {
+    display: block !important;
+
+    margin: 0 !important;
+
+    color: #8B958A !important;
+
+    font-size: 10px !important;
+}
+
+body.kasir-dashboard .quick-section .quick-menu .quick-card b {
+    flex-shrink: 0 !important;
+
+    color: #7FA88C !important;
+
+    font-size: 17px !important;
+}
+
+
+/* =========================================================
+   TOMBOL BUKA KASIR
+   INI YANG TADI BERANTAKAN
+========================================================= */
+
+body.kasir-dashboard .quick-section a.quick-transaction {
+    width: 100% !important;
+
+    min-height: 72px !important;
+
+    margin: 12px 0 0 !important;
+
+    padding: 12px 15px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    background: #7FA88C !important;
+
+    border: 1px solid #7FA88C !important;
+
+    border-radius: 10px !important;
+
+    color: #FFFFFF !important;
+
+    text-decoration: none !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+}
+
+body.kasir-dashboard .quick-section a.quick-transaction:hover {
+    background: #66846F !important;
+
+    border-color: #66846F !important;
+
+    color: #FFFFFF !important;
+
+    transform: translateY(-1px) !important;
+
+    text-decoration: none !important;
+
+    box-shadow: 0 4px 12px rgba(127, 168, 140, .18) !important;
+}
+
+
+/* ICON BUKA KASIR */
+
+body.kasir-dashboard .quick-section .quick-transaction-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(255, 255, 255, .14) !important;
+
+    border-radius: 9px !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 17px !important;
+}
+
+
+/* TEKS BUKA KASIR */
+
+body.kasir-dashboard .quick-section .quick-transaction-text {
+    flex: 1 !important;
+
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 4px !important;
+}
+
+body.kasir-dashboard .quick-section .quick-transaction-text span {
+    display: block !important;
+
+    margin: 0 !important;
+
+    color: rgba(255, 255, 255, .72) !important;
+
+    font-size: 9px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: .8px !important;
+}
+
+body.kasir-dashboard .quick-section .quick-transaction-text strong {
+    display: block !important;
+
+    margin: 0 !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+
+/* PANAH */
+
+body.kasir-dashboard .quick-section .quick-transaction > b {
+    flex-shrink: 0 !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 17px !important;
+
+    font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.kasir-footer {
+    font-size: 11px !important;
+}

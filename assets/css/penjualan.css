@@ -1,0 +1,600 @@
+/* =====================================================
+   BOTTLE.CO - HALAMAN DATA PENJUALAN
+   Sidebar dikelola oleh admin.css
+   ===================================================== */
+
+:root {
+    --sales-primary: #7FA88C;
+    --sales-primary-dark: #66846F;
+    --sales-text: #26332A;
+    --sales-muted: #78837B;
+    --sales-border: #E1E8E2;
+    --sales-soft: #F7F9F5;
+    --sales-bg: #F4F7F5;
+}
+
+/* Wrapper mengikuti lebar sidebar pada tampilan Bottle.Co */
+.sales-page-wrapper {
+    margin-left: 180px;
+    min-height: 100vh;
+    background: var(--sales-bg);
+    box-sizing: border-box;
+}
+
+/* Header halaman */
+.sales-topbar {
+    min-height: 88px;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+    border-bottom: 1px solid var(--sales-border);
+    box-sizing: border-box;
+}
+
+.sales-topbar-heading h1 {
+    margin: 0 0 5px;
+    color: var(--sales-text);
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.sales-topbar-heading p {
+    margin: 0;
+    color: var(--sales-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sales-admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.sales-admin-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sales-admin-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sales-admin-info strong {
+    color: var(--sales-text);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sales-admin-info span {
+    color: var(--sales-muted);
+    font-size: 12px;
+}
+
+/* Konten */
+.sales-main {
+    width: 100%;
+    margin: 0;
+    padding: 26px 30px 36px;
+    box-sizing: border-box;
+}
+
+.sales-content {
+    width: 100%;
+    padding: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Intro / judul daftar */
+.sales-intro {
+    min-height: 106px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #fff;
+    border: 1px solid var(--sales-border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(38, 51, 42, .035);
+    box-sizing: border-box;
+}
+
+.sales-intro-left {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sales-intro-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+    font-size: 21px;
+}
+
+.sales-intro-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--sales-primary-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .7px;
+}
+
+.sales-intro h2 {
+    margin: 0 0 5px;
+    color: var(--sales-text);
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.sales-intro p {
+    margin: 0;
+    color: var(--sales-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Pencarian */
+.sales-search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.sales-search-form .form-control {
+    width: 255px;
+    min-height: 42px;
+    padding: 9px 13px;
+    border: 1px solid #D8E1DA;
+    border-radius: 8px;
+    color: var(--sales-text);
+    background: #fff;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.sales-search-form .form-control:focus {
+    border-color: var(--sales-primary);
+    box-shadow: 0 0 0 3px rgba(127, 168, 140, .14);
+}
+
+.btn-add-sale,
+.btn-reset-sale {
+    min-height: 42px;
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: .2s ease;
+}
+
+.btn-add-sale {
+    border: 1px solid var(--sales-primary);
+    background: var(--sales-primary);
+    color: #fff;
+}
+
+.btn-add-sale:hover {
+    border-color: var(--sales-primary-dark);
+    background: var(--sales-primary-dark);
+    color: #fff;
+}
+
+.btn-reset-sale {
+    border: 1px solid #D8E1DA;
+    background: #fff;
+    color: #52665B;
+}
+
+.btn-reset-sale:hover {
+    background: var(--sales-soft);
+    color: var(--sales-text);
+}
+
+/* Tabel */
+.sales-section {
+    margin-top: 20px;
+}
+
+.sales-box {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--sales-border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(38, 51, 42, .035);
+}
+
+.sales-box-header {
+    min-height: 66px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid var(--sales-border);
+}
+
+.sales-table-label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--sales-primary-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .7px;
+}
+
+.sales-box-header h2 {
+    margin: 0;
+    color: var(--sales-text);
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.sales-table-count {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sales-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sales-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.sales-table thead {
+    background: var(--sales-soft);
+}
+
+.sales-table th {
+    height: 43px;
+    padding: 12px 14px;
+    color: #647269;
+    border-bottom: 1px solid var(--sales-border);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.sales-table td {
+    height: 60px;
+    padding: 12px 14px;
+    color: #52665B;
+    border-bottom: 1px solid var(--sales-border);
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.sales-table tbody tr {
+    transition: background .15s ease;
+}
+
+.sales-table tbody tr:hover {
+    background: #FAFCFA;
+}
+
+.sales-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sales-col-no {
+    width: 56px;
+    text-align: center !important;
+}
+
+.sales-col-action {
+    width: 80px;
+    text-align: center !important;
+}
+
+.sales-number-cell {
+    color: var(--sales-muted) !important;
+    font-size: 13px !important;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Identitas transaksi */
+.transaction-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.transaction-icon {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+    font-size: 15px;
+}
+
+.transaction-cell > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.transaction-cell strong {
+    color: var(--sales-text);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.transaction-cell span {
+    color: var(--sales-muted);
+    font-size: 11px;
+}
+
+/* Tanggal */
+.date-cell {
+    color: #647269;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Pelanggan */
+.sales-customer {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.sales-customer-avatar {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sales-customer > span {
+    color: var(--sales-text);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Harga */
+.sale-total {
+    color: var(--sales-primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Aksi */
+.sales-action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.sales-btn-action {
+    width: 33px;
+    height: 33px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.sales-btn-view {
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+}
+
+.sales-btn-view:hover {
+    background: #DCE9DF;
+    color: #405C48;
+}
+
+/* Data kosong */
+.sales-empty {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.sales-empty-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #EAF2EC;
+    color: var(--sales-primary-dark);
+    font-size: 23px;
+}
+
+.sales-empty h3 {
+    margin: 0 0 7px;
+    color: var(--sales-text);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.sales-empty p {
+    margin: 0 0 16px;
+    color: var(--sales-muted);
+    font-size: 13px;
+}
+
+.btn-empty-sale {
+    min-height: 38px;
+    padding: 9px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--sales-primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-empty-sale:hover {
+    background: var(--sales-primary-dark);
+    color: #fff;
+}
+
+/* Responsif */
+@media (max-width: 1100px) {
+    .sales-main {
+        padding: 22px 20px 30px;
+    }
+
+    .sales-intro {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sales-search-form {
+        width: 100%;
+    }
+
+    .sales-search-form .form-control {
+        width: auto;
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales-page-wrapper {
+        margin-left: 70px;
+    }
+
+    .sales-topbar {
+        min-height: 76px;
+        padding: 15px 18px;
+    }
+
+    .sales-topbar-heading h1 {
+        font-size: 20px;
+    }
+
+    .sales-topbar-heading p {
+        font-size: 12px;
+    }
+
+    .sales-admin-info {
+        display: none;
+    }
+
+    .sales-main {
+        padding: 18px 14px 25px;
+    }
+
+    .sales-intro {
+        padding: 18px;
+    }
+
+    .sales-intro h2 {
+        font-size: 19px;
+    }
+
+    .sales-search-form {
+        flex-wrap: wrap;
+    }
+
+    .sales-search-form .form-control {
+        flex: 1 1 180px;
+    }
+
+    .sales-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sales-topbar {
+        padding: 14px;
+    }
+
+    .sales-topbar-heading h1 {
+        font-size: 18px;
+    }
+
+    .sales-intro-left {
+        align-items: flex-start;
+        gap: 11px;
+    }
+
+    .sales-intro-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 18px;
+    }
+
+    .sales-intro p {
+        font-size: 13px;
+    }
+
+    .sales-box-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

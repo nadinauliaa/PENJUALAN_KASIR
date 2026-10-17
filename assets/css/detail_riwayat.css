@@ -1,0 +1,370 @@
+/* =========================================================
+   DETAIL TRANSAKSI KASIR
+========================================================= */
+
+.detail-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+    padding: 48px 0 70px;
+}
+
+
+/* HEADER */
+
+.detail-header {
+    margin-bottom: 30px;
+}
+
+.detail-back {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #78837B;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.detail-back:hover {
+    color: #7FA88C;
+}
+
+.detail-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #7FA88C;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.detail-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.detail-header h1 {
+    margin: 0;
+    color: #26332A;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+}
+
+.detail-header p {
+    margin: 8px 0 0;
+    color: #78837B;
+    font-size: 14px;
+}
+
+.btn-transaksi-baru {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* INFO */
+
+.detail-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-info-card {
+    min-height: 105px;
+    padding: 20px 22px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E2;
+    border-radius: 11px;
+}
+
+.detail-info-card > span {
+    display: block;
+    margin-bottom: 9px;
+    color: #98A49D;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.detail-info-card strong {
+    display: block;
+    color: #26332A;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.detail-info-card small {
+    display: block;
+    margin-top: 4px;
+    color: #98A49D;
+    font-size: 11px;
+}
+
+
+/* CARD */
+
+.detail-card {
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E2;
+    border-radius: 12px;
+}
+
+.detail-card-header {
+    padding: 24px 25px 20px;
+    border-bottom: 1px solid #E1E8E2;
+}
+
+.detail-card-header span {
+    color: #7FA88C;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.detail-card-header h2 {
+    margin: 5px 0 0;
+    color: #26332A;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* TABLE */
+
+.detail-table-wrapper {
+    overflow-x: auto;
+}
+
+.detail-table {
+    min-width: 700px;
+    margin: 0;
+}
+
+.detail-table thead th {
+    padding: 13px 18px;
+    background: #FAFCF9;
+    border-bottom: 1px solid #E1E8E2;
+    color: #78837B;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.detail-table tbody td {
+    padding: 17px 18px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F0F3F1;
+}
+
+.detail-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.detail-number {
+    color: #98A49D;
+    font-size: 12px;
+}
+
+.detail-product-name {
+    color: #3F4A43;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.detail-price {
+    color: #78837B;
+    font-size: 12px;
+}
+
+.detail-quantity {
+    display: inline-flex;
+    min-width: 32px;
+    min-height: 28px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    border-radius: 6px;
+    background: #EAF2EC;
+    color: #3F4A43;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.detail-subtotal {
+    color: #7FA88C;
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.detail-empty {
+    height: 150px;
+    color: #98A49D;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* TOTAL */
+
+.detail-total-area {
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    border-top: 1px solid #E1E8E2;
+    background: #FAFCF9;
+}
+
+.detail-total-item {
+    text-align: right;
+}
+
+.detail-total-item span,
+.detail-grand-total span {
+    display: block;
+    margin-bottom: 5px;
+    color: #98A49D;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.detail-total-item strong {
+    color: #3F4A43;
+    font-size: 14px;
+}
+
+.detail-grand-total {
+    padding-left: 35px;
+    border-left: 1px solid #D5DED7;
+    text-align: right;
+}
+
+.detail-grand-total strong {
+    color: #7FA88C;
+    font-size: 22px;
+    font-weight: 750;
+}
+
+
+/* PELANGGAN */
+
+.pelanggan-detail-card {
+    margin-bottom: 20px;
+}
+
+.pelanggan-detail {
+    padding: 22px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 25px;
+}
+
+.pelanggan-detail > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pelanggan-detail span {
+    margin-bottom: 6px;
+    color: #98A49D;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pelanggan-detail strong {
+    color: #3F4A43;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ACTION */
+
+.detail-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-kembali {
+    min-height: 40px;
+    padding: 9px 17px;
+    border: 1px solid #D5DED7;
+    border-radius: 7px;
+    color: #52665B;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-kembali:hover {
+    border-color: #BFD0C3;
+    color: #7FA88C;
+    background: #F7F9F5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .detail-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pelanggan-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-total-area {
+        justify-content: space-between;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .detail-container {
+        width: calc(100% - 30px);
+        padding-top: 35px;
+    }
+
+    .detail-title-row {
+        display: block;
+    }
+
+    .btn-transaksi-baru {
+        margin-top: 18px;
+    }
+
+    .detail-total-area {
+        display: block;
+    }
+
+    .detail-total-item {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .detail-grand-total {
+        padding: 15px 0 0;
+        border-top: 1px solid #D5DED7;
+        border-left: none;
+        text-align: left;
+    }
+
+}

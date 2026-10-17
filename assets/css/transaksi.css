@@ -1,0 +1,432 @@
+/* =========================================================
+   TRANSAKSI KASIR
+========================================================= */
+
+.transaksi-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+    padding: 48px 0 70px;
+}
+
+
+/* HEADER */
+
+.transaksi-header {
+    margin-bottom: 30px;
+}
+
+.transaksi-back {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #78837B;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.transaksi-back:hover {
+    color: #7FA88C;
+}
+
+.transaksi-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #7FA88C;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.transaksi-header h1 {
+    margin: 0;
+    color: #26332A;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+}
+
+.transaksi-header p {
+    margin: 8px 0 0;
+    color: #78837B;
+    font-size: 14px;
+}
+
+
+/* ALERT */
+
+.transaksi-alert {
+    margin-bottom: 22px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+
+/* LAYOUT */
+
+.transaksi-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 20px;
+    align-items: start;
+}
+
+
+/* MAIN CARD */
+
+.transaksi-main-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #E1E8E2;
+    border-radius: 12px;
+}
+
+
+/* CARD HEADER */
+
+.transaksi-card-header {
+    padding: 24px 25px 18px;
+}
+
+.transaksi-card-header span {
+    color: #7FA88C;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.transaksi-card-header h2 {
+    margin: 5px 0 0;
+    color: #26332A;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.produk-header {
+    padding-top: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* FORM */
+
+.transaksi-form-group {
+    padding: 0 25px 26px;
+}
+
+.transaksi-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3F4A43;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.transaksi-form-group .form-select {
+    min-height: 43px;
+    border-color: #D5DED7;
+    border-radius: 7px;
+    color: #3F4A43;
+    font-size: 13px;
+}
+
+.transaksi-form-group small {
+    display: block;
+    margin-top: 7px;
+    color: #98A49D;
+    font-size: 11px;
+}
+
+
+/* BUTTON TAMBAH */
+
+.btn-tambah-produk {
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* TABLE */
+
+.produk-table-wrapper {
+    overflow-x: auto;
+    border-top: 1px solid #E1E8E2;
+    border-bottom: 1px solid #E1E8E2;
+}
+
+.transaksi-table {
+    min-width: 720px;
+    margin: 0;
+}
+
+.transaksi-table thead th {
+    padding: 13px 14px;
+    background: #FAFCF9;
+    border-bottom: 1px solid #E1E8E2;
+    color: #78837B;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+}
+
+.transaksi-table tbody td {
+    padding: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F0F3F1;
+}
+
+.transaksi-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* SELECT PRODUK */
+
+.produk-select {
+    min-height: 42px;
+    border-color: #D5DED7;
+    border-radius: 7px;
+    color: #3F4A43;
+    font-size: 12px;
+}
+
+.produk-select:focus,
+.jumlah-produk:focus {
+    border-color: #7FA88C;
+    box-shadow: 0 0 0 3px rgba(127, 168, 140, 0.08);
+}
+
+
+/* HARGA */
+
+.harga-produk {
+    color: #52665B;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* JUMLAH */
+
+.jumlah-produk {
+    min-height: 42px;
+    border-color: #D5DED7;
+    border-radius: 7px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.stok-info {
+    display: block;
+    margin-top: 5px;
+    color: #98A49D;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+
+/* SUBTOTAL */
+
+.subtotal-produk {
+    color: #7FA88C;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* HAPUS */
+
+.hapus-produk {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #E1E8E2;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #98A49D;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hapus-produk:hover {
+    border-color: #f0b8b8;
+    background: #fff7f7;
+    color: #d92d20;
+}
+
+
+/* INFO PRODUK */
+
+.produk-info {
+    padding: 14px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #98A49D;
+    font-size: 11px;
+}
+
+.produk-info strong {
+    color: #52665B;
+}
+
+
+/* SUMMARY */
+
+.transaksi-summary-card {
+    position: sticky;
+    top: 20px;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #E1E8E2;
+    border-radius: 12px;
+}
+
+.summary-label {
+    color: #7FA88C;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.transaksi-summary-card h2 {
+    margin: 6px 0 25px;
+    color: #26332A;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* SUMMARY DETAIL */
+
+.summary-detail {
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E1E8E2;
+}
+
+.summary-detail span {
+    color: #78837B;
+    font-size: 12px;
+}
+
+.summary-detail strong {
+    color: #3F4A43;
+    font-size: 13px;
+}
+
+
+/* TOTAL */
+
+.summary-total {
+    margin-top: 10px;
+    padding: 19px 0;
+    border-top: 1px solid #D5DED7;
+}
+
+.summary-total span {
+    display: block;
+    margin-bottom: 7px;
+    color: #78837B;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.summary-total strong {
+    color: #26332A;
+    font-size: 24px;
+    font-weight: 750;
+}
+
+
+/* BUTTON SIMPAN */
+
+.btn-simpan-transaksi {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 8px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* BUTTON BATAL */
+
+.btn-batal-transaksi {
+    width: 100%;
+    min-height: 43px;
+    margin-top: 9px;
+    border: 1px solid #D5DED7;
+    border-radius: 7px;
+    color: #52665B;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-batal-transaksi:hover {
+    border-color: #BFD0C3;
+    color: #7FA88C;
+    background: #F7F9F5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .transaksi-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .transaksi-summary-card {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .transaksi-container {
+        width: calc(100% - 30px);
+        padding-top: 35px;
+    }
+
+    .transaksi-header h1 {
+        font-size: 27px;
+    }
+
+    .produk-header {
+        display: block;
+    }
+
+    .btn-tambah-produk {
+        margin-top: 15px;
+    }
+
+    .produk-info {
+        display: block;
+    }
+
+    .produk-info span {
+        display: block;
+    }
+
+    .produk-info span + span {
+        margin-top: 5px;
+    }
+
+}

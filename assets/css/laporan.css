@@ -1,0 +1,520 @@
+/* =========================================================
+   KASIRPRO - LAPORAN (SELARAS DENGAN PENJUALAN.CSS)
+   ========================================================= */
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.sales-content {
+    padding: 28px 32px 35px;
+    font-size: 14px;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.sales-intro {
+    min-height: 110px;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #E1E8E2;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(38, 51, 42, .035);
+}
+
+.sales-intro-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sales-intro-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #EAF2EC;
+    color: #7FA88C;
+    font-size: 20px;
+}
+
+.sales-intro-label {
+    display: block;
+    margin-bottom: 4px;
+    color: #7FA88C;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.sales-intro h2 {
+    margin: 0 0 4px;
+    color: #26332A;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -.3px;
+}
+
+.sales-intro p {
+    margin: 0;
+    color: #78837B;
+    font-size: 14px;
+}
+
+/* =========================================================
+   BUTTON / AKSI
+   ========================================================= */
+
+.btn-add-sale {
+    height: 42px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #7FA88C;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.btn-add-sale:hover {
+    color: #ffffff;
+    background: #66846F;
+    transform: translateY(-1px);
+}
+
+.btn-add-sale span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.sales-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.sales-summary-card {
+    min-height: 90px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff;
+    border: 1px solid #E1E8E2;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(38, 51, 42, .035);
+}
+
+.sales-summary-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #EAF2EC;
+    color: #7FA88C;
+    font-size: 18px;
+}
+
+.sales-summary-card span {
+    display: block;
+    margin-bottom: 4px;
+    color: #78837B;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.sales-summary-card strong {
+    color: #26332A;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.sales-summary-card .income-value {
+    font-size: 20px;
+}
+
+/* =========================================================
+   TABLE SECTION
+   ========================================================= */
+
+.sales-section {
+    margin-top: 24px;
+}
+
+.sales-box {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #E1E8E2;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(38, 51, 42, .035);
+}
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.sales-box-header {
+    min-height: 68px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E1E8E2;
+}
+
+.sales-table-label {
+    display: block;
+    margin-bottom: 2px;
+    color: #7FA88C;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.sales-box-header h2 {
+    margin: 0;
+    color: #26332A;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.sales-table-count {
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #66846F;
+    background: #EAF2EC;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.sales-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sales-table thead {
+    background: #F7F9F5;
+}
+
+.sales-table th {
+    height: 42px;
+    padding: 0 20px;
+    color: #78837B;
+    border-bottom: 1px solid #E1E8E2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.sales-table td {
+    height: 64px;
+    padding: 12px 20px;
+    color: #52665B;
+    border-bottom: 1px solid #E1E8E2;
+    font-size: 14px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.sales-table tbody tr {
+    transition: .15s ease;
+}
+
+.sales-table tbody tr:hover {
+    background: #FAFCF9;
+}
+
+.sales-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sales-col-no {
+    width: 60px;
+    text-align: center !important;
+}
+
+.sales-col-action {
+    width: 120px;
+}
+
+/* =========================================================
+   NOMOR
+   ========================================================= */
+
+.sales-number-cell {
+    color: #78837B !important;
+    font-size: 13px !important;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =========================================================
+   TRANSACTION CELL
+   ========================================================= */
+
+.transaction-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.transaction-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #EAF2EC;
+    color: #7FA88C;
+    font-size: 15px;
+}
+
+.transaction-cell strong {
+    color: #26332A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.transaction-cell span {
+    color: #78837B;
+    font-size: 12px;
+}
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.date-cell {
+    color: #66846F;
+    font-size: 13px;
+}
+
+/* =========================================================
+   CUSTOMER
+   ========================================================= */
+
+.sales-customer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sales-customer-avatar {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EAF2EC;
+    color: #66846F;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sales-customer > span {
+    color: #52665B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.sale-total {
+    color: #7FA88C;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.sales-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sales-btn-action {
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.sales-btn-view {
+    color: #66846F;
+    background: #EAF2EC;
+}
+
+.sales-btn-view:hover {
+    color: #526B5A;
+    background: #DCE9DF;
+}
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.sales-empty {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sales-empty-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #EAF2EC;
+    color: #7FA88C;
+    font-size: 24px;
+}
+
+.sales-empty h3 {
+    margin: 0 0 6px;
+    color: #26332A;
+    font-size: 16px;
+}
+
+.sales-empty p {
+    margin: 0 0 16px;
+    color: #78837B;
+    font-size: 13px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .sales-content {
+        padding: 22px 20px 30px;
+    }
+
+    .sales-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .sales-content {
+        padding: 18px 15px 25px;
+    }
+
+    .sales-intro {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn-add-sale {
+        width: 100%;
+    }
+
+    .sales-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .sales-box-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =========================================================
+   PRINT MODE
+   ========================================================= */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    .admin-sidebar,
+    .admin-topbar,
+    .btn-add-sale,
+    form {
+        display: none !important;
+    }
+
+    .admin-wrapper {
+        margin-left: 0 !important;
+        width: 100% !important;
+        background: #fff !important;
+    }
+
+    .sales-content {
+        padding: 0 !important;
+    }
+
+    .sales-intro,
+    .sales-summary-card,
+    .sales-box {
+        border: 1px solid #ddd;
+        box-shadow: none !important;
+    }
+
+    .sales-btn-view {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   PAKSA POSISI WRAPPER AGAR TIDAK TERTUTUP SIDEBAR 198PX
+   ========================================================= */
+
+.admin-wrapper {
+    margin-left: 198px !important;
+    width: calc(100% - 198px) !important;
+    box-sizing: border-box !important;
+}

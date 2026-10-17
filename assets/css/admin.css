@@ -1,0 +1,1422 @@
+/* =========================================================
+   KASIRPRO ADMIN
+   CSS FINAL
+   Sidebar dipertahankan
+========================================================= */
+
+:root {
+    --primary: #7FA88C;
+    --primary-dark: #66846F;
+    --primary-soft: #EAF2EC;
+    --text: #26332A;
+    --muted: #78837B;
+    --border: #E1E8E2;
+    --bg: #F7F9F5;
+    --white: #fff;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #d97706;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SIDEBAR LAMA
+   Dipertahankan untuk halaman yang masih menggunakan
+   .sidebar
+========================================================= */
+
+.sidebar {
+    width: 255px;
+    min-width: 255px;
+    min-height: 100vh;
+
+    position: fixed;
+    inset: 0 auto 0 0;
+
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 22px 15px;
+
+    color: #fff;
+    background: #111827;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 4px 12px 27px;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    color: #fff;
+    font-size: 19px;
+
+    background: linear-gradient(135deg, #7FA88C, #66846F);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-text strong {
+    font-size: 17px;
+}
+
+.brand-text span {
+    margin-top: 5px;
+    color: #94a3b8;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sidebar-section {
+    margin-bottom: 22px;
+}
+
+.menu-label {
+    display: block;
+    padding: 0 13px 8px;
+    color: #667085;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.menu-item {
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    padding: 0 13px;
+    margin: 3px 0;
+
+    border-radius: 9px;
+
+    color: #aeb8ca;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: .2s ease;
+}
+
+.menu-item i {
+    width: 19px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    color: #fff;
+    background: rgba(255,255,255,.06);
+}
+
+.menu-item.active {
+    color: #fff;
+    background: linear-gradient(90deg, #7FA88C, #66846F);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT LAMA
+========================================================= */
+
+.main-content {
+    width: calc(100% - 255px);
+    margin-left: 255px;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   SIDEBAR UTAMA ADMIN
+   BAGIAN INI DIPERTAHANKAN
+========================================================= */
+
+.admin-sidebar {
+    width: 198px;
+    min-width: 198px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+
+    border-right: 1px solid #E1E8E2;
+}
+
+
+/* =========================================================
+   BRAND SIDEBAR
+========================================================= */
+
+.admin-brand {
+    height: 110px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.admin-brand .brand-logo {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    border-radius: 9px;
+
+    background: linear-gradient(135deg, #7FA88C, #66846F);
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-info strong {
+    color: #26332A;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.brand-info small {
+    margin-top: 3px;
+
+    color: #8a9aaa;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+   Tidak diubah dari patokan sebelumnya
+========================================================= */
+
+.sidebar-title {
+    margin: 10px 18px 7px;
+
+    color: #8a9aaa;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.sidebar-title.system-title {
+    margin-top: 18px;
+}
+
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding: 0 10px;
+}
+
+.admin-menu-item {
+    min-height: 39px;
+
+    padding: 9px 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 8px;
+
+    color: #5f7180;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.admin-menu-item .menu-icon {
+    width: 20px;
+    min-width: 20px;
+
+    height: 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    line-height: 1;
+    text-align: center;
+}
+
+.admin-menu-item .menu-text {
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.admin-menu-item:hover {
+    color: #66846F;
+    background: #EAF2EC;
+}
+
+.admin-menu-item.active {
+    color: #66846F;
+    background: #EAF2EC;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding: 12px 10px 15px;
+
+    border-top: 1px solid #E1E8E2;
+}
+
+.sidebar-bottom .admin-menu-item {
+    color: #788895;
+}
+
+.sidebar-bottom .admin-menu-item:hover {
+    color: #c44b4b;
+    background: #fff3f3;
+}
+
+.admin-sidebar .sidebar-footer {
+    margin-top: auto;
+
+    padding: 11px 9px 14px;
+
+    border-top: 1px solid #E1E8E2;
+}
+
+.admin-sidebar .logout-link {
+    color: #e05252;
+}
+
+.admin-sidebar .logout-link:hover {
+    color: #c83d3d;
+    background: #fff3f3;
+}
+
+
+/* =========================================================
+   ADMIN WRAPPER
+========================================================= */
+
+/* =========================================================
+   ADMIN WRAPPER (FIXED OVERLAP)
+========================================================= */
+
+.admin-wrapper {
+    width: calc(100% - 198px);
+    margin-left: 198px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.admin-topbar {
+    height: 82px;
+
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+
+    border-bottom: 1px solid #E1E8E2;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 900;
+}
+
+.admin-topbar > div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar-small {
+    margin-bottom: 4px;
+
+    color: #8a9aaa;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.admin-topbar h1,
+.admin-topbar h2 {
+    margin: 0;
+
+    color: #26332A;
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFILE ADMIN
+========================================================= */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #EAF2EC;
+    color: #66846F;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.profile-text strong {
+    color: #3F4A43;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-text span {
+    margin-top: 3px;
+
+    color: #8a9aaa;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MAIN ADMIN
+========================================================= */
+
+.admin-main {
+    width: 100%;
+
+    margin: 0;
+
+    min-height: calc(100vh - 82px);
+
+    background: #F7F9F5;
+}
+
+
+/* =========================================================
+   DASHBOARD CONTENT
+========================================================= */
+
+.admin-main .dashboard-content {
+    width: 100%;
+
+    padding: 28px 32px 35px;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+/* =========================================================
+   DASHBOARD WELCOME
+   Card pengantar dashboard
+========================================================= */
+
+.dashboard-welcome {
+    width: 100%;
+
+    min-height: 104px;
+
+    margin-bottom: 22px;
+
+    padding: 20px 22px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 16px rgba(38, 51, 42, .035);
+}
+
+
+/* Isi welcome */
+
+.dashboard-welcome > div {
+    width: 100%;
+}
+
+
+/* Label */
+
+.dashboard-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #7FA88C;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+}
+
+
+/* Judul */
+
+.dashboard-welcome h2 {
+    margin: 0 0 6px;
+
+    color: #26332A;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    letter-spacing: -.3px;
+}
+
+
+/* Deskripsi */
+
+.dashboard-welcome p {
+    margin: 0;
+
+    color: #78837B;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   STATISTIK DASHBOARD
+========================================================= */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    min-height: 110px;
+
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    background: #fff;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(38,51,42,.04);
+
+    transition: .2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(38,51,42,.07);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #EAF2EC;
+
+    font-size: 19px;
+}
+
+.stat-info {
+    min-width: 0;
+}
+
+.stat-info span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #78837B;
+
+    font-size: 13px;
+}
+
+.stat-info strong {
+    display: block;
+
+    color: #26332A;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.income-number {
+    font-size: 17px !important;
+}
+
+
+/* =========================================================
+   DASHBOARD SECTION
+========================================================= */
+
+.dashboard-section {
+    margin-bottom: 23px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(38,51,42,.03);
+}
+
+.section-heading {
+    min-height: 70px;
+
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #E1E8E2;
+}
+
+.section-heading span {
+    color: #7FA88C;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+}
+
+.section-heading h3 {
+    margin: 4px 0 0;
+
+    color: #26332A;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.view-all {
+    color: #7FA88C;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.view-all:hover {
+    color: #66846F;
+}
+
+
+/* =========================================================
+   TABLE DASHBOARD
+========================================================= */
+
+.dashboard-table {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.dashboard-table table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.dashboard-table th {
+    padding: 12px 20px;
+
+    color: #78837B;
+
+    background: #F7F9F5;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.dashboard-table td {
+    padding: 14px 20px;
+
+    color: #52627a;
+
+    border-top: 1px solid #E1E8E2;
+
+    font-size: 13px;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #FAFCF9;
+}
+
+.transaction-id {
+    color: #7FA88C;
+
+    font-weight: 600;
+}
+
+.table-total {
+    color: #26332A;
+
+    font-weight: 600;
+}
+
+.empty-table {
+    padding: 30px !important;
+
+    color: #8a98ad !important;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   QUICK MENU
+========================================================= */
+
+.quick-menu {
+    padding: 17px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 13px;
+}
+
+.quick-card {
+    min-height: 80px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 10px;
+
+    color: #26332A;
+
+    background: #fff;
+
+    transition: .2s ease;
+}
+
+.quick-card:hover {
+    background: #FAFCF9;
+
+    border-color: #BFD0C3;
+
+    transform: translateY(-2px);
+}
+
+.quick-icon {
+    width: 41px;
+    height: 41px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #7FA88C;
+
+    background: #EAF2EC;
+
+    font-size: 18px;
+}
+
+.quick-card strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #26332A;
+
+    font-size: 13px;
+}
+
+.quick-card span {
+    display: block;
+
+    color: #78837B;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    margin-top: 25px;
+
+    padding: 16px 2px 4px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #E1E8E2;
+
+    color: #98a2b3;
+
+    font-size: 10px;
+}
+
+.footer strong {
+    color: #66736B;
+}
+
+
+/* =========================================================
+   RESPONSIVE SIDEBAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+
+        transition: transform .25s ease;
+    }
+
+    .admin-sidebar.show-mobile {
+        transform: translateX(0);
+
+        box-shadow:
+            10px 0 30px rgba(0,0,0,.2);
+    }
+
+    .admin-wrapper {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .admin-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .admin-topbar {
+        padding: 0 20px;
+    }
+
+    .admin-main .dashboard-content {
+        padding: 22px 20px 30px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-menu {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .admin-sidebar {
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .admin-sidebar .brand-info,
+    .admin-sidebar .sidebar-title,
+    .admin-sidebar .menu-text {
+        display: none;
+    }
+
+    .admin-sidebar .admin-brand {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .admin-sidebar .admin-menu {
+        padding: 0 8px;
+    }
+
+    .admin-sidebar .admin-menu-item {
+        justify-content: center;
+        padding: 9px;
+    }
+
+    .admin-sidebar .menu-icon {
+        width: 22px;
+        min-width: 22px;
+
+        font-size: 16px;
+    }
+
+    .admin-sidebar .sidebar-bottom {
+        padding: 10px 8px;
+    }
+
+    .admin-topbar {
+        height: 72px;
+    }
+
+    .admin-topbar h1,
+    .admin-topbar h2 {
+        font-size: 19px;
+    }
+
+    .profile-text {
+        display: none;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome h2 {
+        font-size: 24px;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 11px 14px;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+}
+
+
+/* =========================================================
+   PERBESAR FONT DASHBOARD
+   Tidak mengubah sidebar
+========================================================= */
+
+/* Tulisan sambutan */
+.dashboard-label {
+    font-size: 12px;
+}
+
+.dashboard-welcome h2 {
+    font-size: 30px;
+}
+
+.dashboard-welcome p {
+    font-size: 15px;
+}
+
+
+/* Card statistik */
+.stat-info span {
+    font-size: 14px;
+}
+
+.stat-info strong {
+    font-size: 23px;
+}
+
+.income-number {
+    font-size: 18px !important;
+}
+
+
+/* Judul section */
+.section-heading span {
+    font-size: 11px;
+}
+
+.section-heading h3 {
+    font-size: 19px;
+}
+
+.view-all {
+    font-size: 13px;
+}
+
+
+/* Tabel transaksi */
+.dashboard-table th {
+    font-size: 12px;
+}
+
+.dashboard-table td {
+    font-size: 14px;
+}
+
+.transaction-id {
+    font-size: 14px;
+}
+
+.table-total {
+    font-size: 14px;
+}
+
+
+/* Menu cepat */
+.quick-card strong {
+    font-size: 14px;
+}
+
+.quick-card span {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FINAL PERAPIAN DASHBOARD
+   SIDEBAR TIDAK DIUBAH
+========================================================= */
+
+
+/* =========================================================
+   AREA DASHBOARD
+========================================================= */
+
+.admin-main .dashboard-content {
+    padding: 25px 30px 35px;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.dashboard-welcome {
+    margin-bottom: 20px;
+}
+
+.dashboard-label {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.dashboard-welcome h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.dashboard-welcome p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   STATISTIK
+========================================================= */
+
+.dashboard-stats {
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    min-height: 98px;
+    padding: 17px 18px;
+    gap: 13px;
+}
+
+.stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+}
+
+.stat-info span {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.stat-info strong {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.income-number {
+    font-size: 16px !important;
+}
+
+
+/* =========================================================
+   KARTU TRANSAKSI
+========================================================= */
+
+.dashboard-section {
+    margin-bottom: 22px;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   HEADER SECTION
+========================================================= */
+
+.section-heading {
+    min-height: 70px;
+    padding: 15px 19px;
+}
+
+.section-heading span {
+    font-size: 10px;
+}
+
+.section-heading h3 {
+    margin: 4px 0 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.view-all {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABEL DASHBOARD
+   INI YANG DIBESARKAN
+========================================================= */
+
+.dashboard-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Header tabel */
+
+.dashboard-table th {
+    padding: 13px 19px;
+
+    color: #60756A;
+    background: #F7F9F5;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    line-height: 1.4;
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* Isi tabel */
+
+.dashboard-table td {
+    padding: 15px 19px;
+
+    color: #52665B;
+
+    border-top: 1px solid #E1E8E2;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* ID transaksi */
+
+.transaction-id {
+    color: #7FA88C;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Total harga */
+
+.table-total {
+    color: #26332A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Hover tabel */
+
+.dashboard-table tbody tr:hover {
+    background: #FAFCF9;
+}
+
+
+/* Data kosong */
+
+.empty-table {
+    padding: 32px !important;
+    color: #8a98ad !important;
+    font-size: 14px !important;
+    text-align: center;
+}
+
+
+/* =========================================================
+   MENU CEPAT
+========================================================= */
+
+.quick-menu {
+    padding: 16px;
+    gap: 13px;
+}
+
+.quick-card {
+    min-height: 78px;
+    padding: 14px;
+}
+
+.quick-card strong {
+    font-size: 13px;
+}
+
+.quick-card span {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    margin-top: 23px;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-main .dashboard-content {
+        padding: 22px 20px 30px;
+    }
+
+    .dashboard-welcome h2 {
+        font-size: 23px;
+    }
+
+    .dashboard-table th {
+        font-size: 11px;
+    }
+
+    .dashboard-table td {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .dashboard-welcome h2 {
+        font-size: 22px;
+    }
+
+    .dashboard-table th {
+        padding: 12px 14px;
+        font-size: 10px;
+    }
+
+    .dashboard-table td {
+        padding: 13px 14px;
+        font-size: 13px;
+    }
+
+    .transaction-id,
+    .table-total {
+        font-size: 13px;
+    }
+}
+
+
+/* Welcome */
+.dashboard-label {
+    font-weight: 700;
+}
+
+.dashboard-welcome h2 {
+    font-size: 25px;
+    font-weight: 650;
+}
+
+.dashboard-welcome p {
+    font-size: 13px;
+    font-weight: 500;
+}

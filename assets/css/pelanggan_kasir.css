@@ -1,0 +1,1635 @@
+/* =========================================================
+   KASIRPRO - HALAMAN PELANGGAN
+   MATCH DENGAN kasir/index.php
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Arial, sans-serif;
+
+    background: #F7F9F5;
+    color: #26332A;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.kasir-sidebar,
+.admin-sidebar {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 235px !important;
+    min-width: 235px !important;
+    max-width: 235px !important;
+
+    padding: 24px 14px 16px !important;
+
+    background: #FFFFFF !important;
+
+    border-right: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    z-index: 1000 !important;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.sidebar-brand,
+.admin-brand {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    padding: 0 9px 28px !important;
+}
+
+.sidebar-logo,
+.brand-icon {
+    width: 40px !important;
+    height: 40px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #7FA88C !important;
+
+    border-radius: 10px !important;
+
+    color: #FFFFFF !important;
+
+    font-size: 17px !important;
+    font-weight: 800 !important;
+}
+
+.sidebar-brand strong,
+.brand-text strong {
+    display: block !important;
+
+    color: #26332A !important;
+
+    font-size: 17px !important;
+    font-weight: 750 !important;
+}
+
+.sidebar-brand span,
+.brand-text span {
+    display: block !important;
+
+    margin-top: 4px !important;
+
+    color: #98A49D !important;
+
+    font-size: 9px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+}
+
+
+/* =========================================================
+   MENU LABEL
+========================================================= */
+
+.sidebar-label,
+.menu-label {
+    padding: 0 11px 9px !important;
+
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .8px !important;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.sidebar-menu {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 3px !important;
+}
+
+
+/* =========================================================
+   MENU ITEM
+========================================================= */
+
+.sidebar-link,
+.menu-item {
+    width: 100% !important;
+    min-height: 44px !important;
+
+    padding: 0 12px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    border-radius: 8px !important;
+
+    background: transparent !important;
+
+    color: #78837B !important;
+
+    font-size: 13px !important;
+    font-weight: 500 !important;
+
+    text-decoration: none !important;
+
+    transition: .18s ease !important;
+}
+
+.sidebar-link:hover,
+.menu-item:hover {
+    background: #EAF2EC !important;
+    color: #7FA88C !important;
+}
+
+.sidebar-link.active,
+.menu-item.active {
+    background: #EAF2EC !important;
+    color: #7FA88C !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.sidebar-icon {
+    width: 20px !important;
+
+    flex-shrink: 0 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 15px !important;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.sidebar-bottom {
+    position: absolute !important;
+
+    left: 14px !important;
+    right: 14px !important;
+    bottom: 16px !important;
+
+    margin: 0 !important;
+    padding-top: 12px !important;
+
+    border-top: 1px solid #E1E8E2 !important;
+}
+
+.sidebar-logout,
+.logout-link {
+    width: 100% !important;
+    height: 39px !important;
+
+    padding: 0 10px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 9px !important;
+
+    border-radius: 7px !important;
+
+    background: transparent !important;
+
+    color: #D92D20 !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+}
+
+.sidebar-logout:hover,
+.logout-link:hover {
+    background: #FFF5F5 !important;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.kasir-main,
+.admin-main {
+    min-height: 100vh !important;
+
+    margin-left: 235px !important;
+
+    padding: 0 !important;
+
+    background: #F7F9F5 !important;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.kasir-topbar,
+.page-header {
+    width: 100% !important;
+    height: 66px !important;
+
+    padding: 0 30px !important;
+
+    background: #FFFFFF !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    position: relative !important;
+
+    z-index: 10 !important;
+}
+
+
+/* =========================================================
+   TOPBAR LEFT
+========================================================= */
+
+.topbar-heading,
+.page-header-left {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.topbar-label,
+.breadcrumb-text {
+    color: #7FA88C !important;
+
+    font-size: 10px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: 1px !important;
+}
+
+.kasir-topbar h1,
+.page-header h1 {
+    margin: 3px 0 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.topbar-right,
+.admin-profile {
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 20px !important;
+}
+
+.topbar-profile {
+    min-width: 170px !important;
+
+    padding-left: 17px !important;
+
+    border-left: 1px solid #E1E8E2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 10px !important;
+}
+
+.topbar-avatar,
+.profile-avatar {
+    width: 38px !important;
+    height: 38px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #EAF2EC !important;
+
+    border-radius: 50% !important;
+
+    color: #7FA88C !important;
+
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+.topbar-profile-info,
+.profile-text {
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 3px !important;
+}
+
+.topbar-profile-info strong,
+.profile-text strong {
+    color: #26332A !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.topbar-profile-info span,
+.profile-text span {
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.customer-content {
+    padding: 26px 38px 40px !important;
+}
+
+
+/* =========================================================
+   HEADER PELANGGAN
+========================================================= */
+
+.customer-header {
+    margin-bottom: 20px !important;
+}
+
+.customer-header h2 {
+    margin: 0 0 5px !important;
+
+    color: #26332A !important;
+
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+
+    font-weight: 700 !important;
+}
+
+.customer-header p {
+    margin: 0 !important;
+
+    color: #78837B !important;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.content-toolbar {
+    width: 100% !important;
+
+    margin-bottom: 18px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 20px !important;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-form {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 8px !important;
+}
+
+.search-box {
+    width: 300px !important;
+    height: 40px !important;
+
+    padding: 0 14px !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    color: #26332A !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+
+    outline: none !important;
+}
+
+.search-box::placeholder {
+    color: #98A49D !important;
+}
+
+.search-box:focus {
+    border-color: #7FA88C !important;
+
+    box-shadow: 0 0 0 3px rgba(127, 168, 140, .12) !important;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.search-form button,
+.btn-search,
+.btn-reset {
+    height: 40px !important;
+
+    padding: 0 15px !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    background: #FFFFFF !important;
+
+    color: #52665B !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    cursor: pointer !important;
+
+    transition: .18s ease !important;
+
+    text-decoration: none !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.search-form button:hover,
+.btn-search:hover,
+.btn-reset:hover {
+    background: #EAF2EC !important;
+
+    border-color: #7FA88C !important;
+
+    color: #66846F !important;
+}
+
+
+/* =========================================================
+   TAMBAH PELANGGAN
+========================================================= */
+
+.btn-primary {
+    height: 40px !important;
+
+    padding: 0 16px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid #7FA88C !important;
+
+    border-radius: 8px !important;
+
+    background: #7FA88C !important;
+
+    color: #FFFFFF !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+
+    transition: .18s ease !important;
+}
+
+.btn-primary:hover {
+    background: #66846F !important;
+
+    border-color: #66846F !important;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.customer-card {
+    width: 100% !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #E1E8E2 !important;
+
+    border-radius: 10px !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.card-header {
+    padding: 20px 20px 18px !important;
+
+    background: #FFFFFF !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+}
+
+.card-header h3 {
+    margin: 0 0 4px !important;
+
+    color: #26332A !important;
+
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+
+    font-weight: 700 !important;
+}
+
+.card-header p {
+    margin: 0 !important;
+
+    color: #78837B !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-wrapper {
+    width: 100% !important;
+
+    overflow-x: auto !important;
+}
+
+.customer-table {
+    width: 100% !important;
+
+    border-collapse: collapse !important;
+
+    table-layout: fixed !important;
+}
+
+
+/* TABLE HEADER */
+
+.customer-table th {
+    height: 40px !important;
+
+    padding: 0 14px !important;
+
+    background: #F7F9F5 !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+
+    color: #78837B !important;
+
+    font-size: 10px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: .5px !important;
+
+    text-align: left !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* TABLE BODY */
+
+.customer-table td {
+    height: 57px !important;
+
+    padding: 0 14px !important;
+
+    background: #FFFFFF !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+
+    color: #26332A !important;
+
+    font-size: 13px !important;
+
+    vertical-align: middle !important;
+}
+
+.customer-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.customer-table tbody tr:hover td {
+    background: #FAFCF9 !important;
+}
+
+
+/* =========================================================
+   CUSTOMER NAME
+========================================================= */
+
+.customer-table td:nth-child(2) {
+    font-weight: 600 !important;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.action-buttons {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 7px !important;
+}
+
+.btn-edit,
+.btn-delete {
+    height: 30px !important;
+
+    padding: 0 11px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 6px !important;
+
+    font-family: inherit !important;
+
+    font-size: 12px !important;
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+}
+
+.btn-edit {
+    background: #EAF2EC !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    color: #66846F !important;
+}
+
+.btn-edit:hover {
+    background: #DCE9DF !important;
+}
+
+.btn-delete {
+    background: #FFFFFF !important;
+
+    border: 1px solid #F1B8B4 !important;
+
+    color: #D92D20 !important;
+}
+
+.btn-delete:hover {
+    background: #FFF5F5 !important;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-row {
+    height: 100px !important;
+
+    text-align: center !important;
+
+    color: #98A49D !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .kasir-sidebar,
+    .admin-sidebar {
+        width: 72px !important;
+        min-width: 72px !important;
+        max-width: 72px !important;
+
+        padding: 20px 9px 12px !important;
+    }
+
+    .sidebar-brand,
+    .admin-brand {
+        justify-content: center !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        padding-bottom: 25px !important;
+    }
+
+    .sidebar-brand > div:last-child,
+    .brand-text,
+    .sidebar-label,
+    .menu-label,
+    .sidebar-link span:last-child,
+    .menu-item span:last-child {
+        display: none !important;
+    }
+
+    .sidebar-link,
+    .menu-item {
+        justify-content: center !important;
+
+        padding: 0 !important;
+    }
+
+    .sidebar-bottom {
+        left: 9px !important;
+        right: 9px !important;
+    }
+
+    .kasir-main,
+    .admin-main {
+        margin-left: 72px !important;
+    }
+
+    .kasir-topbar,
+    .page-header {
+        height: 62px !important;
+
+        padding: 0 15px !important;
+    }
+
+    .kasir-topbar h1,
+    .page-header h1 {
+        font-size: 17px !important;
+    }
+
+    .topbar-profile {
+        min-width: auto !important;
+
+        padding-left: 10px !important;
+    }
+
+    .topbar-profile-info,
+    .profile-text {
+        display: none !important;
+    }
+
+    .topbar-avatar,
+    .profile-avatar {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .customer-content {
+        padding: 20px 15px 30px !important;
+    }
+
+    .customer-header h2 {
+        font-size: 21px !important;
+    }
+
+    .content-toolbar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .search-form {
+        width: 100% !important;
+    }
+
+    .search-box {
+        width: 100% !important;
+    }
+
+    .btn-primary {
+        width: 100% !important;
+    }
+
+    .customer-table {
+        min-width: 700px !important;
+    }
+}
+/* =========================================================
+   FIX FINAL - HEADER + SEARCH PELANGGAN
+========================================================= */
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+    width: 100% !important;
+    height: 66px !important;
+
+    padding: 0 30px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    background: #FFFFFF !important;
+
+    border-bottom: 1px solid #E1E8E2 !important;
+}
+
+
+/* bagian kiri header */
+
+.page-header-left {
+    height: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    gap: 2px !important;
+}
+
+
+/* KASIR / PELANGGAN */
+
+.breadcrumb-text {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #7FA88C !important;
+
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: 1px !important;
+}
+
+
+/* DATA PELANGGAN */
+
+.page-header h1 {
+    display: block !important;
+
+    margin: 2px 0 0 !important;
+    padding: 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 19px !important;
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================
+   PROFILE HEADER
+========================= */
+
+.admin-profile {
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    margin: 0 !important;
+}
+
+.profile-avatar {
+    width: 38px !important;
+    height: 38px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #EAF2EC !important;
+
+    border-radius: 50% !important;
+
+    color: #7FA88C !important;
+
+    font-size: 13px !important;
+    font-weight: 800 !important;
+}
+
+.profile-text {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 3px !important;
+
+    margin-left: 10px !important;
+}
+
+.profile-text strong {
+    margin: 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+}
+
+.profile-text span {
+    margin: 0 !important;
+
+    color: #98A49D !important;
+
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+}
+
+
+/* =========================================================
+   CONTENT ATAS
+========================================================= */
+
+.customer-content {
+    padding: 27px 38px 40px !important;
+}
+
+
+/* =========================================================
+   TOOLBAR SEARCH
+========================================================= */
+
+.content-toolbar {
+    width: 100% !important;
+
+    min-height: 40px !important;
+
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 20px !important;
+}
+
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+.search-form {
+    height: 40px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 8px !important;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+   Ini penting karena screenshot menunjukkan
+   input masih default browser
+========================================================= */
+
+.search-box {
+    width: 235px !important;
+    height: 40px !important;
+
+    margin: 0 !important;
+    padding: 0 12px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    color: #26332A !important;
+
+    overflow: hidden !important;
+}
+
+
+/* icon pencarian */
+
+.search-box i,
+.search-box svg,
+.search-box .search-icon {
+    width: 18px !important;
+    min-width: 18px !important;
+
+    margin-right: 8px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #7FA88C !important;
+
+    font-size: 14px !important;
+}
+
+
+/* INPUT DI DALAM SEARCH BOX */
+
+.search-box input {
+    width: 100% !important;
+    height: 38px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #26332A !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+}
+
+.search-box input::placeholder {
+    color: #98A49D !important;
+}
+
+
+/* kalau input langsung menjadi child form */
+
+.search-form input[type="text"],
+.search-form input[type="search"] {
+    height: 40px !important;
+
+    margin: 0 !important;
+
+    padding: 0 13px !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    outline: none !important;
+
+    background: #FFFFFF !important;
+
+    color: #26332A !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+}
+
+.search-form input[type="text"]::placeholder,
+.search-form input[type="search"]::placeholder {
+    color: #98A49D !important;
+}
+
+.search-form input[type="text"]:focus,
+.search-form input[type="search"]:focus {
+    border-color: #7FA88C !important;
+
+    box-shadow: 0 0 0 3px rgba(127, 168, 140, .10) !important;
+}
+
+
+/* =========================================================
+   TOMBOL CARI
+========================================================= */
+
+.search-form button {
+    height: 40px !important;
+
+    margin: 0 !important;
+
+    padding: 0 15px !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    background: #FFFFFF !important;
+
+    color: #52665B !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    cursor: pointer !important;
+
+    transition: .18s ease !important;
+}
+
+.search-form button:hover {
+    background: #EAF2EC !important;
+
+    border-color: #7FA88C !important;
+
+    color: #66846F !important;
+}
+
+
+/* =========================================================
+   TAMBAH PELANGGAN
+========================================================= */
+
+.content-toolbar .btn-primary {
+    height: 40px !important;
+
+    margin: 0 !important;
+
+    padding: 0 16px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid #7FA88C !important;
+
+    border-radius: 8px !important;
+
+    background: #7FA88C !important;
+
+    color: #FFFFFF !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+
+    text-decoration: none !important;
+}
+
+.content-toolbar .btn-primary:hover {
+    background: #66846F !important;
+
+    border-color: #66846F !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .page-header {
+        height: 62px !important;
+
+        padding: 0 15px !important;
+    }
+
+    .page-header h1 {
+        font-size: 17px !important;
+    }
+
+    .breadcrumb-text {
+        font-size: 9px !important;
+    }
+
+    .customer-content {
+        padding: 20px 15px 30px !important;
+    }
+
+    .content-toolbar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        gap: 10px !important;
+    }
+
+    .search-form {
+        width: 100% !important;
+    }
+
+    .search-box {
+        width: 100% !important;
+    }
+
+    .content-toolbar .btn-primary {
+        width: 100% !important;
+    }
+}
+/* =========================================================
+   FIX FINAL HEADER & SEARCH
+========================================================= */
+
+
+/* =========================================================
+   HEADER - JANGAN SAMPAI TEKS TERPOTONG
+========================================================= */
+
+.page-header {
+    height: 66px !important;
+    padding: 0 30px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    overflow: visible !important;
+}
+
+.page-header-left {
+    height: 66px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    padding-top: 2px !important;
+
+    overflow: visible !important;
+}
+
+.breadcrumb-text {
+    display: block !important;
+
+    margin: 0 0 3px !important;
+    padding: 0 !important;
+
+    color: #7FA88C !important;
+
+    font-size: 9px !important;
+    line-height: 12px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: .9px !important;
+}
+
+.page-header h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #26332A !important;
+
+    font-size: 19px !important;
+    line-height: 23px !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+.search-form {
+    height: 40px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+   HANYA SATU KOTAK
+========================================================= */
+
+.search-box {
+    width: 235px !important;
+    height: 40px !important;
+
+    padding: 0 12px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    background: #FFFFFF !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    overflow: hidden !important;
+
+    box-shadow: none !important;
+}
+
+
+/* icon */
+
+.search-box i,
+.search-box svg,
+.search-box .search-icon {
+    width: 18px !important;
+    min-width: 18px !important;
+
+    margin: 0 7px 0 0 !important;
+
+    color: #7FA88C !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   INPUT DI DALAM SEARCH BOX
+   HILANGKAN KOTAK KEDUA
+========================================================= */
+
+.search-box input,
+.search-box input[type="text"],
+.search-box input[type="search"] {
+    width: 100% !important;
+    height: 38px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+
+    color: #26332A !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+}
+
+.search-box input::placeholder {
+    color: #98A49D !important;
+}
+
+
+/* =========================================================
+   KALAU INPUT LANGSUNG DI DALAM FORM
+   TETAP JANGAN ADA DOUBLE BOX
+========================================================= */
+
+.search-form > input[type="text"],
+.search-form > input[type="search"] {
+    width: 235px !important;
+    height: 40px !important;
+
+    margin: 0 !important;
+    padding: 0 13px !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    background: #FFFFFF !important;
+
+    color: #26332A !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+}
+
+.search-form > input[type="text"]::placeholder,
+.search-form > input[type="search"]::placeholder {
+    color: #98A49D !important;
+}
+
+
+/* =========================================================
+   BUTTON CARI
+========================================================= */
+
+.search-form button {
+    height: 40px !important;
+
+    margin: 0 !important;
+    padding: 0 15px !important;
+
+    border: 1px solid #D5DED7 !important;
+
+    border-radius: 8px !important;
+
+    background: #FFFFFF !important;
+
+    color: #52665B !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+
+    font-weight: 600 !important;
+
+    cursor: pointer !important;
+
+    box-shadow: none !important;
+}
+
+.search-form button:hover {
+    background: #EAF2EC !important;
+
+    border-color: #7FA88C !important;
+
+    color: #66846F !important;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.content-toolbar {
+    min-height: 40px !important;
+
+    margin: 0 0 18px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+
+/* =========================================================
+   TAMBAH PELANGGAN
+========================================================= */
+
+.content-toolbar .btn-primary {
+    height: 40px !important;
+
+    margin: 0 !important;
+
+    padding: 0 16px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 8px !important;
+
+    background: #7FA88C !important;
+
+    border: 1px solid #7FA88C !important;
+
+    color: #FFFFFF !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .page-header {
+        height: 62px !important;
+        padding: 0 15px !important;
+    }
+
+    .page-header-left {
+        height: 62px !important;
+    }
+
+    .breadcrumb-text {
+        font-size: 8px !important;
+        line-height: 11px !important;
+    }
+
+    .page-header h1 {
+        font-size: 17px !important;
+        line-height: 21px !important;
+    }
+
+    .content-toolbar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .search-form {
+        width: 100% !important;
+    }
+
+    .search-box {
+        width: 100% !important;
+    }
+
+    .content-toolbar .btn-primary {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,483 @@
+/* =========================================================
+   RIWAYAT TRANSAKSI KASIR
+========================================================= */
+
+.riwayat-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+    padding: 48px 0 70px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.riwayat-header {
+    margin-bottom: 30px;
+}
+
+.riwayat-back {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #78837B;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.riwayat-back:hover {
+    color: #7FA88C;
+}
+
+.riwayat-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #7FA88C;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.riwayat-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.riwayat-header h1 {
+    margin: 0;
+    color: #26332A;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+}
+
+.riwayat-header p {
+    margin: 8px 0 0;
+    color: #78837B;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.btn-transaksi-baru {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.riwayat-card {
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #E1E8E2;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.riwayat-card-top {
+    padding: 24px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid #E1E8E2;
+}
+
+.riwayat-card-label {
+    color: #7FA88C;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.riwayat-card-top h2 {
+    margin: 5px 0 0;
+    color: #26332A;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.riwayat-total {
+    padding-left: 25px;
+    border-left: 1px solid #E1E8E2;
+    text-align: right;
+}
+
+.riwayat-total span {
+    display: block;
+    margin-bottom: 3px;
+    color: #98A49D;
+    font-size: 11px;
+}
+
+.riwayat-total strong {
+    color: #26332A;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.riwayat-search {
+    padding: 18px 25px;
+    background: #FAFCF9;
+    border-bottom: 1px solid #E1E8E2;
+}
+
+.riwayat-search form {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.search-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    font-size: 13px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px 0 38px;
+    border: 1px solid #D5DED7;
+    border-radius: 7px;
+    outline: none;
+    background: #FFFFFF;
+    color: #3F4A43;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.search-wrapper input::placeholder {
+    color: #98A49D;
+}
+
+.search-wrapper input:focus {
+    border-color: #7FA88C;
+    box-shadow: 0 0 0 3px rgba(127, 168, 140, 0.08);
+}
+
+.btn-cari {
+    height: 42px;
+    padding: 0 18px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-reset {
+    height: 42px;
+    padding: 10px 15px;
+    border: 1px solid #D5DED7;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #52665B;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-reset:hover {
+    border-color: #BFD0C3;
+    color: #7FA88C;
+    background: #F7F9F5;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.riwayat-table-wrapper {
+    overflow-x: auto;
+}
+
+.riwayat-table {
+    min-width: 760px;
+    margin: 0;
+}
+
+.riwayat-table thead th {
+    padding: 14px 16px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E1E8E2;
+    color: #78837B;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+}
+
+.riwayat-table tbody td {
+    padding: 17px 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F0F3F1;
+}
+
+.riwayat-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.riwayat-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.riwayat-table tbody tr:hover {
+    background: #FAFCF9;
+}
+
+
+/* =========================================================
+   NOMOR
+========================================================= */
+
+.nomor-row {
+    color: #98A49D;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   KODE TRANSAKSI
+========================================================= */
+
+.kode-transaksi {
+    display: inline-flex;
+    align-items: center;
+    min-height: 27px;
+    padding: 0 9px;
+    border-radius: 6px;
+    background: #EAF2EC;
+    color: #7FA88C;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   TANGGAL
+========================================================= */
+
+.tanggal-transaksi {
+    display: flex;
+    flex-direction: column;
+}
+
+.tanggal-transaksi strong {
+    color: #3F4A43;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.tanggal-transaksi span {
+    margin-top: 3px;
+    color: #98A49D;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   PELANGGAN
+========================================================= */
+
+.nama-pelanggan {
+    color: #52665B;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.total-transaksi {
+    color: #7FA88C;
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   AKSI TRANSAKSI
+========================================================= */
+
+.riwayat-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    gap: 8px !important;
+    white-space: nowrap;
+}
+
+
+/* TOMBOL DETAIL */
+
+.riwayat-actions .btn-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 52px;
+    min-height: 34px;
+
+    margin: 0 !important;
+    padding: 0 11px;
+
+    border: 1px solid #D5DED7;
+    border-radius: 6px;
+
+    color: #52665B;
+    background: #FFFFFF;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.riwayat-actions .btn-detail:hover {
+    border-color: #BFD0C3;
+    color: #7FA88C;
+    background: #F7F9F5;
+}
+
+
+/* TOMBOL CETAK */
+
+.riwayat-actions .btn-cetak-icon {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid #D5DED7 !important;
+    border-radius: 7px !important;
+
+    background: #FFFFFF !important;
+    color: #52665B !important;
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.riwayat-actions .btn-cetak-icon:hover {
+    border-color: #BFD0C3 !important;
+    background: #F7F9F5 !important;
+    color: #7FA88C !important;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.riwayat-empty {
+    height: 260px;
+    text-align: center;
+}
+
+.riwayat-empty > * {
+    display: block;
+}
+
+.empty-icon {
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.riwayat-empty strong {
+    color: #3F4A43;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.riwayat-empty span {
+    margin-top: 5px;
+    color: #98A49D;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .riwayat-container {
+        width: calc(100% - 30px);
+        padding-top: 35px;
+    }
+
+    .riwayat-title-row {
+        display: block;
+    }
+
+    .btn-transaksi-baru {
+        margin-top: 18px;
+    }
+
+    .riwayat-card-top {
+        align-items: flex-start;
+    }
+
+    .riwayat-total {
+        padding-left: 15px;
+    }
+
+    .riwayat-search form {
+        flex-wrap: wrap;
+    }
+
+    .search-wrapper {
+        flex-basis: 100%;
+    }
+
+    .riwayat-actions {
+        gap: 7px !important;
+    }
+
+}

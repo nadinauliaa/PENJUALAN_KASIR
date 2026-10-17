@@ -1,0 +1,662 @@
+/* =========================================================
+   KASIRPRO
+   DETAIL PENJUALAN
+   CSS KHUSUS HALAMAN INI
+   SIDEBAR & TOPBAR TIDAK DIUBAH
+========================================================= */
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.detail-content {
+    width: 100%;
+    padding: 25px 30px 40px;
+
+    background: #F7F9F5;
+
+    box-sizing: border-box;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   PAGE HEADER - BOX
+========================================================= */
+
+.detail-page-header {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 20px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(38, 51, 42, .035);
+
+    box-sizing: border-box;
+}
+
+
+/* LABEL */
+
+.detail-page-label {
+    margin: 0 0 6px;
+
+    color: #7FA88C;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .8px;
+}
+
+
+/* TITLE */
+
+.detail-page-title h1 {
+    margin: 0;
+
+    color: #26332A;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* DESCRIPTION */
+
+.detail-page-title p {
+    margin: 6px 0 0;
+
+    color: #78837B;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.detail-summary {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.detail-summary-card {
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 17px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(38, 51, 42, .035);
+
+    box-sizing: border-box;
+
+    transition: .2s ease;
+}
+
+
+.detail-summary-card:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(38, 51, 42, .055);
+}
+
+
+/* SUMMARY ICON */
+
+.detail-summary-icon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #EAF2EC;
+
+    border-radius: 10px;
+
+    color: #7FA88C;
+
+    font-size: 14px;
+}
+
+
+/* SUMMARY TEXT */
+
+.detail-summary-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+
+.detail-summary-label {
+    color: #78837B;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: .5px;
+}
+
+
+.detail-summary-value {
+    color: #26332A;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.detail-table-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #E1E8E2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(38, 51, 42, .035);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.detail-table-header {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #E1E8E2;
+
+    box-sizing: border-box;
+}
+
+
+.detail-table-title {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.detail-table-label {
+    color: #7FA88C;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .7px;
+}
+
+
+.detail-table-title h2 {
+    margin: 0;
+
+    color: #26332A;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.detail-count {
+    padding: 7px 11px;
+
+    background: #EAF2EC;
+
+    border-radius: 20px;
+
+    color: #66846F;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.detail-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.detail-table {
+    width: 100%;
+
+    min-width: 920px;
+
+    border-collapse: collapse;
+}
+
+
+/* TABLE HEADER */
+
+.detail-table thead th {
+    height: 42px;
+
+    padding: 0 12px;
+
+    background: #F7F9F5;
+
+    border-bottom: 1px solid #E1E8E2;
+
+    color: #78837B;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .4px;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* TABLE BODY */
+
+.detail-table tbody td {
+    height: 54px;
+
+    padding: 8px 12px;
+
+    border-bottom: 1px solid #E1E8E2;
+
+    color: #52665B;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    vertical-align: middle;
+}
+
+
+.detail-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+.detail-table tbody tr {
+    transition: background .15s ease;
+}
+
+
+.detail-table tbody tr:hover {
+    background: #FAFCF9;
+}
+
+
+/* =========================================================
+   ID TRANSAKSI
+========================================================= */
+
+.detail-table tbody td strong {
+    color: #52665B;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+.customer-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.customer-avatar {
+    width: 28px;
+    height: 28px;
+
+    min-width: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #EAF2EC;
+
+    border-radius: 7px;
+
+    color: #7FA88C;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.customer-name {
+    color: #52665B;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRODUCT
+========================================================= */
+
+.product-name {
+    color: #52665B;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.transaction-date {
+    color: #78837B;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price {
+    color: #7FA88C;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.quantity-badge {
+    width: 28px;
+    height: 25px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #EAF2EC;
+
+    border-radius: 7px;
+
+    color: #66846F;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SUBTOTAL
+========================================================= */
+
+.subtotal {
+    color: #66846F;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.detail-action {
+    width: 29px;
+    height: 29px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #EAF2EC;
+
+    border-radius: 7px;
+
+    color: #66846F;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    transition: .18s ease;
+}
+
+
+.detail-action:hover {
+    background: #66846F;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.detail-empty {
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+
+.detail-empty-icon {
+    width: 44px;
+    height: 44px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #EAF2EC;
+
+    border-radius: 10px;
+
+    color: #7FA88C;
+
+    font-size: 18px;
+}
+
+
+.detail-empty h3 {
+    margin: 0 0 5px;
+
+    color: #26332A;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.detail-empty p {
+    margin: 0;
+
+    color: #78837B;
+
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   POSISI MAIN TERHADAP SIDEBAR
+   JANGAN DIUBAH
+========================================================= */
+
+.admin-main {
+    margin-left: 198px;
+
+    width: calc(100% - 198px);
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+}
+
+
+.detail-content {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .detail-content {
+        padding: 23px 24px 35px;
+    }
+
+    .detail-summary {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .detail-content {
+        padding: 20px 16px 30px;
+    }
+
+    .detail-page-header {
+        padding: 18px;
+    }
+
+    .detail-page-title h1 {
+        font-size: 21px;
+    }
+
+    .detail-page-title p {
+        font-size: 12px;
+    }
+
+}
